@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkImage" id="EXIT">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">utilities-terminal</property>
+  </object>
+  <object class="GtkImage" id="RESET">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">media-playlist-repeat</property>
+  </object>
+  <object class="GtkImage" id="salvar">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">application-exit</property>
+  </object>
+  <object class="GtkWindow" id="telaIU">
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Teste de GTK+</property>
+    <property name="resizable">False</property>
+    <property name="window-position">center-always</property>
+    <property name="default-width">700</property>
+    <property name="accept-focus">False</property>
+    <property name="gravity">south</property>
+    <signal name="destroy" handler="on_telaIU_destroy" swapped="no"/>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">start</property>
+            <property name="margin-start">15</property>
+            <property name="spacing">3</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Esecreva uma palavra:</property>
+                <attributes>
+                  <attribute name="font-desc" value="Sans Bold 12"/>
+                  <attribute name="style" value="italic"/>
+                  <attribute name="foreground" value="#cdcdabab8f8f"/>
+                  <attribute name="background" value="#000000000000"/>
+                  <attribute name="strikethrough-color" value="#777776767b7b"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="INnomIU">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="halign">end</property>
+                <property name="margin-start">30</property>
+                <property name="max-length">25</property>
+                <property name="width-chars">30</property>
+                <property name="text" translatable="yes">Ex: Banana</property>
+                <property name="shadow-type">out</property>
+                <property name="input-purpose">name</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="salvarIU">
+                <property name="label" translatable="yes">SALVAR</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">salvar</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="on_salvarIU_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <!-- n-columns=3 n-rows=3 -->
+          <object class="GtkGrid">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">end</property>
+            <property name="border-width">20</property>
+            <property name="row-spacing">3</property>
+            <property name="column-spacing">5</property>
+            <property name="row-homogeneous">True</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="halign">start</property>
+                <property name="margin-end">335</property>
+                <property name="label" translatable="yes">palavra1</property>
+              </object>
+              <packing>
+                <property name="left-attach">0</property>
+                <property name="top-attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="margin-end">335</property>
+                <property name="label" translatable="yes">palavra2</property>
+              </object>
+              <packing>
+                <property name="left-attach">0</property>
+                <property name="top-attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="margin-end">335</property>
+                <property name="label" translatable="yes">palavra3</property>
+              </object>
+              <packing>
+                <property name="left-attach">0</property>
+                <property name="top-attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="salvar1IU">
+                <property name="label" translatable="yes">SALVAR</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_salvar1IU_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left-attach">1</property>
+                <property name="top-attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="salvar2IU">
+                <property name="label" translatable="yes">SALVAR</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_salvar2IU_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left-attach">1</property>
+                <property name="top-attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="salvar3IU">
+                <property name="label" translatable="yes">SALVAR</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="on_salvar3IU_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left-attach">1</property>
+                <property name="top-attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="reset1IU">
+                <property name="label" translatable="yes">RESET</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="halign">end</property>
+                <signal name="clicked" handler="on_reset1IU_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left-attach">2</property>
+                <property name="top-attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="reset2IU">
+                <property name="label" translatable="yes">RESET</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_reset2IU_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left-attach">2</property>
+                <property name="top-attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="reset3IU">
+                <property name="label" translatable="yes">RESET</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_reset3IU_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left-attach">2</property>
+                <property name="top-attach">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButtonBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">end</property>
+            <property name="valign">end</property>
+            <property name="margin-end">10</property>
+            <property name="border-width">10</property>
+            <property name="spacing">5</property>
+            <property name="homogeneous">True</property>
+            <property name="layout-style">end</property>
+            <child>
+              <object class="GtkButton" id="resetIU">
+                <property name="label" translatable="yes">RESET</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">RESET</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="on_resetIU_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="exitIU">
+                <property name="label" translatable="yes">EXIT</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">EXIT</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="on_exitIU_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="padding">1</property>
+            <property name="pack-type">end</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
