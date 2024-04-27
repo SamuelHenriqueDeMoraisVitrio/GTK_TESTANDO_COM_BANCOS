@@ -12,7 +12,7 @@ compile: clear
 	$(COMP) $(OPC) -o $(NOME) *.c $(GTK) -rdynamic
 
 clear:
-	rm -f EXE .*.glade.swp .*.c.swp
+	rm -f EXE .*.glade.swp .*.c.swp *.glade~
 	clear
 	@ls -alh --color=auto
 
