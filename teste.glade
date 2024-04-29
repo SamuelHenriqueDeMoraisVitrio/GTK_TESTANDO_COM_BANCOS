@@ -64,7 +64,7 @@
                 <property name="halign">end</property>
                 <property name="margin-start">30</property>
                 <property name="max-length">25</property>
-                <property name="width-chars">30</property>
+                <property name="width-chars">28</property>
                 <property name="text" translatable="yes">Ex: Banana</property>
                 <property name="shadow-type">out</property>
                 <property name="input-purpose">name</property>

@@ -4,6 +4,12 @@
 
 void on_telaIU_destroy();
 
+GtkEntry label_in;
+GtkLabel label1;
+GtkLabel label2;
+GtkLabel label3;
+char labels[3][28];
+
 void on_telaIU_destroy(){
   gtk_main_quit();
 }
