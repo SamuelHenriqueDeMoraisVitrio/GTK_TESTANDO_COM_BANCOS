@@ -9,25 +9,36 @@ GtkEntry *label_in;
 GtkLabel *label1;
 GtkLabel *label2;
 GtkLabel *label3;
-char labels[3][28];
+char labels[6][28];
 const char *label_IN;
 
 void on_salvar1IU_clicked(){
 
   gtk_label_set_text(label1, label_IN);
-  strcpy(labels[0], label_IN);
 }
 
 void on_salvar2IU_clicked(){
 
   gtk_label_set_text(label2, label_IN);
-  strcpy(labels[1], label_IN);
 }
 
 void on_salvar3IU_clicked(){
 
   gtk_label_set_text(label3, label_IN);
-  strcpy(labels[2], label_IN);
+}
+
+void on_reset1IU_clicked(){
+  gtk_label_set_text(label1, labels[3]);
+}
+
+void on_reset2IU_clicked(){
+  gtk_label_set_text(label2, labels[4]);
+
+}
+
+void on_reset3IU_clicked(){
+  gtk_label_set_text(label3, labels[5]);
+
 }
 
 void on_telaIU_destroy(){
@@ -46,8 +57,22 @@ int main(int numArgs, char *nomArgs[]){
     return 1;
   }
 
-  fscanf(arquivo_txt, "%99[^\n]", linha);
-  printf("%s", linha);
+  fgets(linha, sizeof(linha), arquivo_txt);
+
+  for(short i = 3; i < 6; i++){
+    fgets(labels[i], sizeof(labels[i]), arquivo_txt);
+  }
+
+  fgets(linha, sizeof(linha), arquivo_txt);
+  fgets(linha, sizeof(linha), arquivo_txt);
+
+  for(short i = 0; i < 3; i++){
+    fgets(labels[i], sizeof(labels[i]), arquivo_txt);
+  }
+
+  for(short i = 0; i < 6; i++){
+    labels[i][strcspn(labels[i], "\n")] = '\0';
+  }
 
   fclose(arquivo_txt);
 
@@ -68,9 +93,9 @@ int main(int numArgs, char *nomArgs[]){
     "on_salvar1IU_clicked", G_CALLBACK(on_salvar1IU_clicked),
     "on_salvar2IU_clicked", G_CALLBACK(on_salvar2IU_clicked),
     "on_salvar3IU_clicked", G_CALLBACK(on_salvar3IU_clicked),
-    "on_reset1IU_clicked", G_CALLBACK(on_telaIU_destroy),
-    "on_reset2IU_clicked", G_CALLBACK(on_telaIU_destroy),
-    "on_reset3IU_clicked", G_CALLBACK(on_telaIU_destroy),
+    "on_reset1IU_clicked", G_CALLBACK(on_reset1IU_clicked),
+    "on_reset2IU_clicked", G_CALLBACK(on_reset2IU_clicked),
+    "on_reset3IU_clicked", G_CALLBACK(on_reset3IU_clicked),
     "on_resetIU_clicked", G_CALLBACK(on_telaIU_destroy),
     "on_exitIU_clicked", G_CALLBACK(on_telaIU_destroy),
     NULL

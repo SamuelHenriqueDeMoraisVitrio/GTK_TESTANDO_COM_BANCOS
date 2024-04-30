@@ -1,9 +1,9 @@
 Labels originais:
-label1:
-label2:
-label3:
+palavra1
+palavra2
+palavra3
 
-labels salval:
-label1:
-label2:
-label3:
+labels salvas:
+palavra1
+palavra2
+palavra3
