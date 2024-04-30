@@ -1,3 +1,4 @@
+#include <bits/types/FILE.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <gtk/gtk.h>
@@ -34,6 +35,21 @@ void on_telaIU_destroy(){
 }
 
 int main(int numArgs, char *nomArgs[]){
+
+  FILE *arquivo_txt;
+  char linha[100];
+
+  arquivo_txt = fopen("banco.txt", "r");
+
+  if(arquivo_txt == NULL){
+    printf("\n\n\t\x1b[91mBanco de dados inexistente!\x1b[0m\n\n");
+    return 1;
+  }
+
+  fscanf(arquivo_txt, "%99[^\n]", linha);
+  printf("%s", linha);
+
+  fclose(arquivo_txt);
 
   GtkBuilder *arquivo;
 
