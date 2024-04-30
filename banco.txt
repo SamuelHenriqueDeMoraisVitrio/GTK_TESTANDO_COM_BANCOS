@@ -1,0 +1,9 @@
+Labels originais:
+palavra1
+palavra2
+palavra3
+
+labels salvas:
+palavra1
+palavra2
+palavra3
