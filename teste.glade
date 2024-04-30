@@ -12,11 +12,6 @@
     <property name="can-focus">False</property>
     <property name="icon-name">media-playlist-repeat</property>
   </object>
-  <object class="GtkImage" id="salvar">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">application-exit</property>
-  </object>
   <object class="GtkWindow" id="telaIU">
     <property name="can-focus">False</property>
     <property name="title" translatable="yes">Teste de GTK+</property>
@@ -73,22 +68,6 @@
                 <property name="expand">False</property>
                 <property name="fill">True</property>
                 <property name="position">1</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="salvarIU">
-                <property name="label" translatable="yes">SALVAR</property>
-                <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="receives-default">True</property>
-                <property name="image">salvar</property>
-                <property name="always-show-image">True</property>
-                <signal name="clicked" handler="on_salvarIU_clicked" swapped="no"/>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">2</property>
               </packing>
             </child>
           </object>
