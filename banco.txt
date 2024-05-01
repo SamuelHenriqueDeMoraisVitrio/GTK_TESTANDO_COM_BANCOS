@@ -4,6 +4,8 @@ palavra2
 palavra3
 
 labels salvas:
-Ex: Banana
-Ex: Banana
-Ex: Banana
+palavra1
+palavra2
+palavra3
+3
+ana

@@ -48,13 +48,12 @@ void on_resetIU_clicked(){
 
   arquivo_txt_salvar = fopen("banco.txt", "r+");
 
+  short l = 3;
   for(short i = 1; i <= 9; i++){
-    short f = 3;
 
     if(i > 6){
-
-      fprintf(arquivo_txt_salvar, "%s\n", labels[f]);
-      f++;
+      fprintf(arquivo_txt_salvar, "%s\n", labels[l]);
+      l++;
     }else{
       fgets(pula_linha, sizeof(pula_linha), arquivo_txt_salvar);
     }
@@ -80,13 +79,12 @@ void on_exitIU_clicked(){
 
   arquivo_txt_salvar = fopen("banco.txt", "r+");
 
+  short l = 0;
   for(short i = 1; i <= 9; i++){
-    short f = 0;
 
     if(i > 6){
-
-      fprintf(arquivo_txt_salvar, "%s\n", labels[f]);
-      f++;
+      fprintf(arquivo_txt_salvar, "%s\n", labels[l]);
+      l++;
     }else{
       fgets(pula_linha, sizeof(pula_linha), arquivo_txt_salvar);
     }
@@ -143,6 +141,10 @@ int main(int numArgs, char *nomArgs[]){
   label2 = GTK_LABEL(gtk_builder_get_object(arquivo, "palavra2"));
   label3 = GTK_LABEL(gtk_builder_get_object(arquivo, "palavra3"));
   label_IN = gtk_entry_get_text(label_in);
+
+  gtk_label_set_text(label1, labels[0]);
+  gtk_label_set_text(label2, labels[1]);
+  gtk_label_set_text(label3, labels[2]);
 
   gtk_builder_add_callback_symbols(arquivo, 
     "on_telaIU_destroy", G_CALLBACK(on_telaIU_destroy),
