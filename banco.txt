@@ -7,3 +7,5 @@ labels salvas:
 palavra1
 palavra2
 palavra3
+3
+ana
