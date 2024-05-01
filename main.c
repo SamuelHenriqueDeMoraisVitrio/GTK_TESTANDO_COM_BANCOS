@@ -28,17 +28,73 @@ void on_salvar3IU_clicked(){
 }
 
 void on_reset1IU_clicked(){
-  gtk_label_set_text(label1, labels[3]);
+  gtk_label_set_text(label1, labels[0]);
 }
 
 void on_reset2IU_clicked(){
-  gtk_label_set_text(label2, labels[4]);
+  gtk_label_set_text(label2, labels[1]);
 
 }
 
 void on_reset3IU_clicked(){
-  gtk_label_set_text(label3, labels[5]);
+  gtk_label_set_text(label3, labels[2]);
 
+}
+
+void on_resetIU_clicked(){
+
+  FILE *arquivo_txt_salvar;
+  char pula_linha[30];
+
+  arquivo_txt_salvar = fopen("banco.txt", "r+");
+
+  for(short i = 1; i <= 9; i++){
+    short f = 3;
+
+    if(i > 6){
+
+      fprintf(arquivo_txt_salvar, "%s\n", labels[f]);
+      f++;
+    }else{
+      fgets(pula_linha, sizeof(pula_linha), arquivo_txt_salvar);
+    }
+  }
+
+  fclose(arquivo_txt_salvar);
+  
+  gtk_main_quit();
+}
+
+void on_exitIU_clicked(){
+  const char *label_tempo;
+
+  label_tempo = gtk_label_get_text(label1);
+  strcpy(labels[0], label_tempo);
+  label_tempo = gtk_label_get_text(label2);
+  strcpy(labels[1], label_tempo);
+  label_tempo = gtk_label_get_text(label3);
+  strcpy(labels[2], label_tempo);
+
+  FILE *arquivo_txt_salvar;
+  char pula_linha[30];
+
+  arquivo_txt_salvar = fopen("banco.txt", "r+");
+
+  for(short i = 1; i <= 9; i++){
+    short f = 0;
+
+    if(i > 6){
+
+      fprintf(arquivo_txt_salvar, "%s\n", labels[f]);
+      f++;
+    }else{
+      fgets(pula_linha, sizeof(pula_linha), arquivo_txt_salvar);
+    }
+  }
+
+  fclose(arquivo_txt_salvar);
+
+  gtk_main_quit();
 }
 
 void on_telaIU_destroy(){
@@ -48,7 +104,7 @@ void on_telaIU_destroy(){
 int main(int numArgs, char *nomArgs[]){
 
   FILE *arquivo_txt;
-  char linha[100];
+  char linha[40];
 
   arquivo_txt = fopen("banco.txt", "r");
 
@@ -96,8 +152,8 @@ int main(int numArgs, char *nomArgs[]){
     "on_reset1IU_clicked", G_CALLBACK(on_reset1IU_clicked),
     "on_reset2IU_clicked", G_CALLBACK(on_reset2IU_clicked),
     "on_reset3IU_clicked", G_CALLBACK(on_reset3IU_clicked),
-    "on_resetIU_clicked", G_CALLBACK(on_telaIU_destroy),
-    "on_exitIU_clicked", G_CALLBACK(on_telaIU_destroy),
+    "on_resetIU_clicked", G_CALLBACK(on_resetIU_clicked),
+    "on_exitIU_clicked", G_CALLBACK(on_exitIU_clicked),
     NULL
     );
 
@@ -106,7 +162,4 @@ int main(int numArgs, char *nomArgs[]){
   gtk_widget_show_all(tela);
 
   gtk_main();
-
-  printf("\n\t%s\n\t%s\n\t%s\n\n", labels[0], labels[1], labels[2]);
-
 }
