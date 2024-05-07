@@ -1,8 +1,6 @@
-#include <bits/types/FILE.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <gtk/gtk.h>
-#include <string.h>
 #include "main.h"
 
 GtkEntry *label_in;
@@ -141,7 +139,7 @@ int main(int numArgs, char *nomArgs[]){
   label2 = GTK_LABEL(gtk_builder_get_object(arquivo, "palavra2"));
   label3 = GTK_LABEL(gtk_builder_get_object(arquivo, "palavra3"));
   label_IN = gtk_entry_get_text(label_in);
-
+  
   gtk_label_set_text(label1, labels[0]);
   gtk_label_set_text(label2, labels[1]);
   gtk_label_set_text(label3, labels[2]);
