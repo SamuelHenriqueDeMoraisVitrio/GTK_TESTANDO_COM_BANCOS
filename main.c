@@ -39,7 +39,7 @@ void on_resetIU_clicked() {
   FILE *arquivo_txt_salvar;
   char pula_linha[30];
 
-  arquivo_txt_salvar = fopen("banco.txt", "r+");
+  arquivo_txt_salvar = fopen("banco/banco.txt", "r+");
 
   short l = 3;
   for (short i = 1; i <= 9; i++) {
@@ -69,7 +69,7 @@ void on_exitIU_clicked() {
   FILE *arquivo_txt_salvar;
   char pula_linha[30];
 
-  arquivo_txt_salvar = fopen("banco.txt", "r+");
+  arquivo_txt_salvar = fopen("banco/banco.txt", "r+");
 
   short l = 0;
   for (short i = 1; i <= 9; i++) {
@@ -94,7 +94,7 @@ int main(int numArgs, char *nomArgs[]) {
   FILE *arquivo_txt;
   char linha[40];
 
-  arquivo_txt = fopen("banco.txt", "r");
+  arquivo_txt = fopen("banco/banco.txt", "r");
 
   if (arquivo_txt == NULL) {
     printf("\n\n\t\x1b[91mBanco de dados inexistente!\x1b[0m\n\n");
