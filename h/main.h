@@ -1,5 +1,5 @@
-#ifndef _main_h_
-#define _main_h_
+#ifndef __main_h__
+#define __main_h__
 
 void on_telaIU_destroy();
 void on_salvar1IU_clicked();

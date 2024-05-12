@@ -1,11 +1,11 @@
-COMP = gcc
-OPC = -Wall -std=c99
+COMP = clang
+OPC = -Wall
 GTK = `pkg-config --cflags --libs gtk+-3.0`
 NOME = EXE
 START = echo "" && echo "Compilação concluida. Iniciando..." && echo "" && echo "" && ./$(NOME)
 
 nome: clear
-	$(COMP) $(OPC) -o $(NOME) *.c $(GTK) -rdynamic
+	$(COMP) $(OPC) -o $(NOME) main.c $(GTK) -rdynamic
 	@$(START)
 
 compile: clear
@@ -16,6 +16,8 @@ clear:
 	clear
 	@echo ""
 	@ls -alh --color=auto
+	@echo ""
 
 run:
 	@$(START)
+	@echo ""

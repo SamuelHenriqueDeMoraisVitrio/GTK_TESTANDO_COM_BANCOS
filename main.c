@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "h/road_path.h"
+
 GtkEntry *label_in;
 GtkLabel *label1;
 GtkLabel *label2;
@@ -91,6 +93,7 @@ void on_telaIU_destroy() {
 }
 
 int main(int numArgs, char *nomArgs[]) {
+  /*
   FILE *arquivo_txt;
   char linha[40];
 
@@ -100,7 +103,6 @@ int main(int numArgs, char *nomArgs[]) {
     printf("\n\n\t\x1b[91mBanco de dados inexistente!\x1b[0m\n\n");
     return 1;
   }
-
   fgets(linha, sizeof(linha), arquivo_txt);
 
   for (short i = 3; i < 6; i++) { fgets(labels[i], sizeof(labels[i]), arquivo_txt); }
@@ -113,6 +115,11 @@ int main(int numArgs, char *nomArgs[]) {
   for (short i = 0; i < 6; i++) { labels[i][strcspn(labels[i], "\n")] = '\0'; }
 
   fclose(arquivo_txt);
+
+*/
+
+  file_openNew_roadPath("otro/testeBanco2.txt");
+  return 0;
 
   GtkBuilder *arquivo;
 
