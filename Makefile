@@ -7,6 +7,7 @@ START = echo "" && echo "Compilação concluida. Iniciando..." && echo "" && ech
 nome: clear
 	$(COMP) $(OPC) -o $(NOME) main.c $(GTK) -rdynamic
 	@$(START)
+	@echo ""
 
 compile: clear
 	$(COMP) $(OPC) -o $(NOME) *.c $(GTK) -rdynamic

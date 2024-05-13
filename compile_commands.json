@@ -147,11 +147,11 @@
       "-x",
       "c",
       "-o",
-      "/tmp/main-b7bb74.o",
+      "/tmp/main-3046c0.o",
       "main.c"
     ],
     "directory": "/home/samuel/Documentos/proc/ui/GTK_TESTANDO_COM_BANCOS",
     "file": "/home/samuel/Documentos/proc/ui/GTK_TESTANDO_COM_BANCOS/main.c",
-    "output": "/tmp/main-b7bb74.o"
+    "output": "/tmp/main-3046c0.o"
   }
 ]
