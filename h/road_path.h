@@ -36,12 +36,10 @@ void file_openNew_roadPath(const char *road) {
       token = strtok_r(NULL, "/", &elements);
     }  // while1
 
-    for (short i = 0; i < num_tokens; i++) {
-      printf("\n\n\t%s\n", str_elements[i]);
-      free(str_elements[i]);
-    }  // for i
+    for (short i = 0; i < num_tokens; i++) { printf("\n\n\t%s\n", str_elements[i]); }  // for i
 
-    //free(str_elements);
+    //free(str_elements[i]);
+    free(str_elements);
     //free(elements);
     //free(road_copy);
     //free(token);
