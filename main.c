@@ -116,9 +116,9 @@ int main(int numArgs, char *nomArgs[]) {
 
   fclose(arquivo_txt);
 */
-  //file_openNew_roadPath("otro/testeBanco2.txt");
+  const char *path = "treeee/testeiBancotxt/sla1/sla2/sla3/banco.txt";
 
-  const char *path = "treeee/teste.txt";
+  file_openNew_roadPath(path);
 
   return 0;
 
