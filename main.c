@@ -115,10 +115,11 @@ int main(int numArgs, char *nomArgs[]) {
   for (short i = 0; i < 6; i++) { labels[i][strcspn(labels[i], "\n")] = '\0'; }
 
   fclose(arquivo_txt);
-
 */
+  //file_openNew_roadPath("otro/testeBanco2.txt");
 
-  file_openNew_roadPath("otro/testeBanco2.txt");
+  const char *path = "treeee/teste.txt";
+
   return 0;
 
   GtkBuilder *arquivo;
