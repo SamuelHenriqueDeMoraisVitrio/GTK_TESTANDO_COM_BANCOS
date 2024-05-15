@@ -4,7 +4,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "h/road_path.h"
+#include "h/banco.h"
+#include "h/doTheWorld.h"
+
+DtwNamespace dtw;
 
 GtkEntry *label_in;
 GtkLabel *label1;
@@ -116,9 +119,12 @@ int main(int numArgs, char *nomArgs[]) {
 
   fclose(arquivo_txt);
 */
-  const char *path = "treeee/testeiBancotxt/sla1/sla2/sla3/banco.txt";
 
-  file_openNew_roadPath(path);
+  dtw = newDtwNamespace();
+
+  DtwResource *banco_de_dados = dtw.resource.newResource("Banco");
+
+  DtwSchema *users_data = dtw.resource.sub_schema(banco_de_dados, "users");
 
   return 0;
 
